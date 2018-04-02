@@ -1,11 +1,17 @@
-var util_tests = require('./tests/util-tests.js');
-var point_tests = require('./tests/point-tests');
-var rectangle_tests = require('./tests/rectangle-tests');
-var quadtree_tests = require('./tests/quadtree-tests');
+import Point from './point';
 
-util_tests();
-point_tests();
-rectangle_tests();
-quadtree_tests();
+const container = document.getElementById('container');
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = 400;
+canvas.height = 400;
+container.appendChild(canvas);
+ctx.rect(0, 0, 400, 400);
+ctx.fillStyle = "blue";
+ctx.fill();
 
-console.log('\n\n');
+ctx.fillStyle = "red";
+
+for (let i = 0; i < 50; i++) {
+  let pt = new Point(Math.random() * 400, Math.random() * 400);
+}

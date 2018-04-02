@@ -2,7 +2,7 @@ var { assert, spyOn} = require('../utils');
 
 module.exports = () => {
   console.log('\n````````````````````');
-  console.log('``````UTILITY``````\n');
+  console.log('``````UTILITY```````\n');
   assert(1,1,'assert function functional');
   assert(typeof spyOn, "function", "spyOn util exists");
   
